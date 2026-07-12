@@ -311,7 +311,7 @@ export default function EditProductModal({
             <div>
 
               <label className="mb-2 block text-white">
-                Plate Number
+                Plate Name 
               </label>
 
               <Input

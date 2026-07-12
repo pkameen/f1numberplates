@@ -164,7 +164,7 @@ export default function Contact() {
                 {/* Email */}
 
                 <a
-                  href="mailto:info@f1numberplates.com"
+                  href="mailto:info@f1numberplates.2017@gmail.com"
                   className="group rounded-3xl border border-white/10 bg-gradient-to-br from-white/10 to-white/5 p-7 transition-all duration-500 hover:-translate-y-2 hover:border-blue-500/40 hover:shadow-[0_25px_70px_rgba(59,130,246,0.25)]"
                 >
                   <div className="flex h-16 w-16 items-center justify-center rounded-2xl bg-blue-500/15 text-blue-400 transition-all duration-300 group-hover:scale-110 group-hover:bg-blue-500/25">
@@ -222,7 +222,7 @@ export default function Contact() {
                   <p className="mt-3 leading-8 text-gray-300">
                     Monday - Saturday
                     <br />
-                    9:00 AM - 8:00 PM
+                    9:00 AM - 7:00 PM
                   </p>
 
                 </div>

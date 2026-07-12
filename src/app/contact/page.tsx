@@ -218,7 +218,7 @@ export default function ContactPage() {
 
                   <p className="text-zinc-500 text-sm mt-1">
 
-                    Mon - Sat : 9 AM - 8 PM
+                    Mon - Sat : 9 AM - 7 PM
 
                   </p>
 

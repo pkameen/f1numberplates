@@ -102,7 +102,7 @@ export default function ManageProductsTable({
 
           <input
             type="text"
-            placeholder="Search Plate Number..."
+            placeholder="Search Plate Name..." 
             value={search}
             onChange={(e) =>
               setSearch(e.target.value)

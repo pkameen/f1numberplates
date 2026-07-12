@@ -278,7 +278,7 @@ const ProductForm = () => {
 
         <div>
           <label className="mb-3 block text-sm font-semibold tracking-wide text-yellow-400">
-            Plate Number
+            Plate Name
           </label>
 
           <Input
@@ -286,7 +286,7 @@ const ProductForm = () => {
             onChange={(e) =>
               setPlateNumber(e.target.value)
             }
-            placeholder="KL 07 AB 0001"
+            placeholder="Prime x"
             className="
               h-14
               rounded-2xl
