@@ -119,7 +119,7 @@ export default function Footer() {
 
             <div className="mt-8 flex flex-col gap-5">
 
-                            <Link
+              <Link
                 href="/"
                 className="group flex items-center justify-between text-gray-400 transition-all duration-300 hover:text-orange-400"
               >
@@ -131,29 +131,7 @@ export default function Footer() {
               </Link>
 
               <Link
-                href="/#gallery"
-                className="group flex items-center justify-between text-gray-400 transition-all duration-300 hover:text-orange-400"
-              >
-                <span>Gallery</span>
-                <ArrowUpRight
-                  size={18}
-                  className="transition-transform duration-300 group-hover:translate-x-1 group-hover:-translate-y-1"
-                />
-              </Link>
-
-              <Link
-                href="/#categories"
-                className="group flex items-center justify-between text-gray-400 transition-all duration-300 hover:text-orange-400"
-              >
-                <span>Categories</span>
-                <ArrowUpRight
-                  size={18}
-                  className="transition-transform duration-300 group-hover:translate-x-1 group-hover:-translate-y-1"
-                />
-              </Link>
-
-              <Link
-                href="/#about"
+                href="/about"
                 className="group flex items-center justify-between text-gray-400 transition-all duration-300 hover:text-orange-400"
               >
                 <span>About Us</span>
@@ -164,7 +142,29 @@ export default function Footer() {
               </Link>
 
               <Link
-                href="/#contact"
+                href="#services"
+                className="group flex items-center justify-between text-gray-400 transition-all duration-300 hover:text-orange-400"
+              >
+                <span>Services</span>
+                <ArrowUpRight
+                  size={18}
+                  className="transition-transform duration-300 group-hover:translate-x-1 group-hover:-translate-y-1"
+                />
+              </Link>
+
+              <Link
+                href="#gallery"
+                className="group flex items-center justify-between text-gray-400 transition-all duration-300 hover:text-orange-400"
+              >
+                <span>Products</span>
+                <ArrowUpRight
+                  size={18}
+                  className="transition-transform duration-300 group-hover:translate-x-1 group-hover:-translate-y-1"
+                />
+              </Link>
+
+              <Link
+                href="#contact"
                 className="group flex items-center justify-between text-gray-400 transition-all duration-300 hover:text-orange-400"
               >
                 <span>Contact</span>

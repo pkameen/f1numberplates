@@ -16,7 +16,7 @@ export default function AdminLayout({
       <main className="min-h-screen bg-gray-100">
         {children}
       </main>
-    );
+    ); 
   }
 
   return (

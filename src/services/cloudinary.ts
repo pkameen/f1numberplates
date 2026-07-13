@@ -1,10 +1,25 @@
-// const CLOUD_NAME = process.env.NEXT_PUBLIC_CLOUDINARY_CLOUD_NAME!;
-// const UPLOAD_PRESET = process.env.NEXT_PUBLIC_CLOUDINARY_UPLOAD_PRESET!;
-const CLOUD_NAME = "pk9yh86f";
-const UPLOAD_PRESET = "f1-number-plates"; 
+const CLOUD_NAME = process.env.NEXT_PUBLIC_CLOUDINARY_CLOUD_NAME!;
+const UPLOAD_PRESET = process.env.NEXT_PUBLIC_CLOUDINARY_UPLOAD_PRESET!; 
 
-console.log("Cloud Name:", CLOUD_NAME);
-console.log("Upload Preset:", UPLOAD_PRESET);
+if (!CLOUD_NAME) {
+  throw new Error(
+    "NEXT_PUBLIC_CLOUDINARY_CLOUD_NAME is missing."
+  );
+}
+
+if (!UPLOAD_PRESET) {
+  throw new Error(
+    "NEXT_PUBLIC_CLOUDINARY_UPLOAD_PRESET is missing."
+  );
+}
+console.log({
+  CLOUD_NAME,
+  UPLOAD_PRESET,
+});
+
+/* -------------------------------- */
+/* Cloudinary Upload Response */
+/* -------------------------------- */
 
 export interface CloudinaryUploadResponse {
   asset_id: string;
@@ -48,14 +63,19 @@ export async function uploadImage(
       }
     );
 
+    const result = await response.json();
+
     if (!response.ok) {
-      throw new Error("Image upload failed.");
+      console.error("Cloudinary Error:", result);
+
+      throw new Error(
+        result.error?.message ??
+          "Cloudinary upload failed"
+      );
     }
 
-    const data: CloudinaryUploadResponse =
-      await response.json();
-
-    return data.secure_url;
+    return result.secure_url;
+    
   } catch (error) {
     console.error("Cloudinary Upload Error:", error);
 
