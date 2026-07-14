@@ -72,6 +72,7 @@ const ImageSlider = ({
         width={700}
         height={500}
         priority={currentIndex === 0}
+        unoptimized
         className="
           h-72
           w-full

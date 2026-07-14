@@ -21,6 +21,8 @@ const Gallery = () => {
         try {
         const data = await getAllPlates();
 
+        console.log("Firestore Data:", data);
+
         if (isMounted) {
             setPlates(data);
             setLoading(false);

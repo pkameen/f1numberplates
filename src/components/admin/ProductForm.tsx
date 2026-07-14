@@ -1,16 +1,12 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import Image from "next/image";
-
 import { Input } from "@/components/ui/Input";
 import { Button } from "@/components/ui/Button";
 import type { PlateAvailability } from "@/types/plate";
 import { addPlate } from "@/services/plateService";
-import {
-  uploadMultipleImages,
-  validateImages,
-} from "@/services/cloudinary";
+import {uploadMultipleImages, validateImages,} from "@/services/imgbb"; 
 
 const categories = [
   "Bike Plates",
@@ -49,6 +45,10 @@ const ProductForm = () => {
 
   const [error, setError] = useState("");
   const [success, setSuccess] = useState("");
+  
+    useEffect(() => {
+      console.log("Selected Images:", images);
+    }, [images]);
 
   /* ----------------------------- */
   /* Image Upload                  */
@@ -60,6 +60,7 @@ const ProductForm = () => {
     if (!e.target.files) return;
 
     const files = Array.from(e.target.files);
+    console.log(files);
 
     const validation = validateImages(files);
 
@@ -119,7 +120,15 @@ const ProductForm = () => {
     /* Upload Images to Cloudinary */
     /* ----------------------------- */
 
+    console.log("Uploading images...");
+
     const imageUrls = await uploadMultipleImages(images);
+
+    console.log("Uploaded Image URLs:", imageUrls);
+
+    if (imageUrls.length === 0) {
+      throw new Error("Image upload failed.");
+    }
 
     /* ----------------------------- */
     /* Save Product to Firestore */
@@ -140,7 +149,7 @@ const ProductForm = () => {
     /* ----------------------------- */
 
     setSuccess("Product added successfully.");
-
+    
     setPlateNumber("");
     setCategory("");
     setPrice("");
@@ -148,6 +157,7 @@ const ProductForm = () => {
     setAvailability("Available");
     setFeatured(false);
     setImages([]);
+
   } catch (err) {
     if (err instanceof Error) {
       setError(err.message);
@@ -155,7 +165,7 @@ const ProductForm = () => {
       setError("Something went wrong.");
     }
 
-    console.error(err);
+    console.error("Submit Error:", err); 
   } finally {
     setLoading(false);
   }
@@ -268,7 +278,8 @@ const ProductForm = () => {
         </p>
 
       </div>
-            {/* ===================================== */}
+      
+      {/* ===================================== */}
       {/* Product Information */}
       {/* ===================================== */}
 
