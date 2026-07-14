@@ -134,6 +134,8 @@ const ProductForm = () => {
     /* Save Product to Firestore */
     /* ----------------------------- */
 
+    console.log("Saving product to Firestore...");
+
     await addPlate({
       plateNumber,
       category,
@@ -143,6 +145,8 @@ const ProductForm = () => {
       featured,
       images: imageUrls,
     });
+
+    console.log("Firestore Save Success ✅");
 
     /* ----------------------------- */
     /* Success */
@@ -165,11 +169,16 @@ const ProductForm = () => {
       setError("Something went wrong.");
     }
 
-    console.error("Submit Error:", err); 
-  } finally {
-    setLoading(false);
-  }
-};
+    console.error("Submit Error:", err);
+
+    if (err instanceof Error) {
+      console.error("Error Message:", err.message);
+    }
+    console.error("Full Error:", JSON.stringify(err, null, 2)); 
+      } finally {
+        setLoading(false);
+      }
+    };
 
   return (
 

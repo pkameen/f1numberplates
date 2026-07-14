@@ -31,16 +31,27 @@ import type { Plate } from "@/types/plate";
 export const addPlate = async (
   plate: Omit<Plate, "id" | "createdAt">
 ) => {
-  const docRef = await addDoc(
-    collection(db, COLLECTION_NAME),
-    {
-      ...plate,
-      createdAt: serverTimestamp(),
-    }
-  );
+  try {
+    console.log("Saving to Firestore...");
+    console.log("Data:", plate);
 
-  return docRef.id;
+    const docRef = await addDoc(
+      collection(db, COLLECTION_NAME),
+      {
+        ...plate,
+        createdAt: serverTimestamp(),
+      }
+    );
+
+    console.log("Firestore Success:", docRef.id);
+
+    return docRef.id;
+  } catch (error) {
+    console.error("Firestore Error:", error);
+    throw error;
+  }
 };
+
 /* --------------------------------------- */
 /* Get All Products                        */
 /* --------------------------------------- */
