@@ -28,7 +28,7 @@ const Navbar = () => {
       label: "Home",
     },
     {
-      href: "/about",
+      href: "/about", 
       label: "About",
     },
     {
@@ -126,61 +126,19 @@ const Navbar = () => {
             </div>
 
             <div className="leading-none">
-              <h1
-                className="
-                  text-[15px]
+              
+              <h2 className="text-sm font-bold tracking-[0.18em] text-white uppercase">
 
-                  font-black
+                F1 Number Plates
 
-                  uppercase
-
-                  tracking-[0.20em]
-
-                  text-white
-
-                  sm:text-[18px]
-                "
-              >
-                F1 NUMBER
-              </h1>
-
-              <h2
-                className="
-                  mt-1
-
-                  text-[15px]
-
-                  font-black
-
-                  uppercase
-
-                  tracking-[0.20em]
-
-                  text-white
-
-                  sm:text-[18px]
-                "
-              >
-                PLATES
               </h2>
 
-              <p
-                className="
-                  mt-1.5
+              <p className="text-[10px] uppercase tracking-[0.30em] text-yellow-400">
 
-                  text-[9px]
+                Premium Admin
 
-                  uppercase
-
-                  tracking-[0.38em]
-
-                  text-[#d4af37]
-
-                  sm:text-[10px]
-                "
-              >
-                Premium Collection
               </p>
+              
             </div>
           </Link>
 

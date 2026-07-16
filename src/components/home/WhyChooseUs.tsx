@@ -10,7 +10,7 @@ const IconQuality = () => (
     viewBox="0 0 24 24"
     strokeWidth={1.5}
     stroke="currentColor"
-    className="w-8 h-8 text-amber-400"
+    className="w-8 h-8 text-amber-400" 
   >
     <path
       strokeLinecap="round"
@@ -120,8 +120,11 @@ const WhyChooseUs: React.FC = () => {
   ];
 
   return (
-    <section className="relative py-20 px-4 sm:px-6 lg:px-8 bg-black text-white min-h-screen flex items-center justify-center font-sans">
-      <div className="max-w-7xl mx-auto text-center z-10">
+    <section className="relative py-20 bg-black text-white justify-center items-center overflow-hidden">
+
+      {/* Container */}
+      <div className="mx-auto max-w-7xl px-6 lg:px-8">
+        
         {/* Premium Badge */}
         <span className="inline-block bg-amber-400/20 text-amber-300 text-xs font-semibold px-3 py-1 rounded-full mb-4 tracking-wider uppercase">
           Premium Features

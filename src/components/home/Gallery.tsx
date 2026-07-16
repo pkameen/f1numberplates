@@ -14,7 +14,7 @@ const Gallery = () => {
 
   /* -------------------------------- */
 
-  useEffect(() => {
+  useEffect(() => { 
   let isMounted = true;
 
   const fetchGallery = async () => {
@@ -108,8 +108,10 @@ const Gallery = () => {
         <div className="absolute left-1/2 top-0 h-[450px] w-[450px] -translate-x-1/2 rounded-full bg-yellow-500/10 blur-[160px]" />
 
       </div>
+      
+      {/* Container */}
 
-      <div className="relative max-w-7xl mx-auto px-6">
+      <div className="mx-auto max-w-7xl px-6 lg:px-8">
 
         {/* Heading */}
 

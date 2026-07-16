@@ -32,7 +32,7 @@ export default function Contact() {
       {/* Container */}
       {/* ======================================= */}
 
-      <div className="relative z-10 mx-auto max-w-7xl px-5 sm:px-6 lg:px-8">
+      <div className="mx-auto max-w-7xl px-6 lg:px-8"> 
 
         {/* ======================================= */}
         {/* Hero */}
@@ -124,7 +124,7 @@ export default function Contact() {
 
                   <h4 className="mt-6 text-2xl font-bold text-white">
                     Call Us
-                  </h4>
+                  </h4> 
 
                   <p className="mt-3 leading-7 text-gray-400">
                     Speak directly with our premium support team.

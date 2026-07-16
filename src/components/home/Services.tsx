@@ -11,7 +11,7 @@ export default function Services() {
   const services = [
     {
       icon: <Crown size={32} />,
-      title: "Luxury Number Plates",
+      title: "Luxury Number Plates", 
       description:
         "Discover an exclusive collection of premium registration plates carefully selected for collectors, investors, and luxury vehicle owners.",
     },
@@ -46,7 +46,9 @@ export default function Services() {
 
       <div className="absolute right-0 bottom-0 h-96 w-96 rounded-full bg-yellow-500/10 blur-[150px]" />
 
-      <div className="container mx-auto px-6">
+      {/* Container */}
+
+      <div className="mx-auto max-w-7xl px-6 lg:px-8">
 
         {/* Heading */}
 

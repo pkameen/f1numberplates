@@ -70,7 +70,7 @@ export default function Sidebar() {
                 alt="Logo"
                 fill
                 priority
-                className="object-contain p-2"
+                className="object-contain p-2" 
               />
 
             </div>
