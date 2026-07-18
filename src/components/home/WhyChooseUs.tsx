@@ -9,7 +9,7 @@ const IconQuality = () => (
     fill="none"
     viewBox="0 0 24 24"
     strokeWidth={1.5}
-    stroke="currentColor"
+    stroke="currentColor" 
     className="w-8 h-8 text-amber-400" 
   >
     <path
@@ -120,10 +120,10 @@ const WhyChooseUs: React.FC = () => {
   ];
 
   return (
-    <section className="relative py-20 bg-black text-white justify-center items-center overflow-hidden">
+    <section className="relative py-24 bg-black text-white overflow-hidden"> 
 
       {/* Container */}
-      <div className="mx-auto max-w-7xl px-6 lg:px-8">
+      <div className="mx-auto text-center max-w-7xl px-6 lg:px-8">
         
         {/* Premium Badge */}
         <span className="inline-block bg-amber-400/20 text-amber-300 text-xs font-semibold px-3 py-1 rounded-full mb-4 tracking-wider uppercase">
@@ -131,7 +131,7 @@ const WhyChooseUs: React.FC = () => {
         </span>
 
         {/* Centered Section Heading */}
-        <h2 className="text-4xl sm:text-5xl lg:text-6xl font-extrabold mb-12 leading-tight">
+        <h2 className="text-4xl text-center sm:text-5xl lg:text-6xl font-extrabold mb-12 leading-tight">
           Why <span className="text-amber-400">Choose Us</span>
         </h2>
 

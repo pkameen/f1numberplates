@@ -16,7 +16,7 @@ export default function Contact() {
     >
       {/* ======================================= */}
       {/* Premium Background */}
-      {/* ======================================= */}
+      {/* ======================================= */} 
 
       <div className="absolute inset-0">
 
@@ -36,9 +36,9 @@ export default function Contact() {
 
         {/* ======================================= */}
         {/* Hero */}
-        {/* ======================================= */}
+        {/* ======================================= */} 
 
-        <div className="mx-auto max-w-4xl text-center">
+        <div className="relative mx-auto flex max-w-7xl flex-col items-center px-6 py-10 md:py-32 text-center">
 
           <span className="inline-flex rounded-full border border-orange-500/20 bg-orange-500/10 px-5 py-2 text-xs font-bold uppercase tracking-[0.35em] text-orange-300 backdrop-blur-xl">
 
@@ -72,7 +72,7 @@ export default function Contact() {
         {/* Premium Support Card */}
         {/* ======================================= */}
 
-        <div className="mt-20">
+        <div className="mt-8">
 
           <div className="relative overflow-hidden rounded-[36px] border border-white/10 bg-white/5 p-6 backdrop-blur-3xl shadow-[0_30px_80px_rgba(0,0,0,0.45)] sm:p-8 lg:p-14">
 
@@ -112,8 +112,8 @@ export default function Contact() {
               {/* Cards */}
 
               <div className="mt-12 grid gap-5 sm:grid-cols-2 xl:grid-cols-3">
-                                {/* Phone */}
 
+                {/* Phone */}
                 <a
                   href="tel:+919048908003"
                   className="group rounded-3xl border border-white/10 bg-gradient-to-br from-white/10 to-white/5 p-7 transition-all duration-500 hover:-translate-y-2 hover:border-orange-500/40 hover:shadow-[0_25px_70px_rgba(249,115,22,0.25)]"
@@ -259,7 +259,7 @@ export default function Contact() {
         {/* Premium CTA */}
         {/* ======================================= */}
 
-        <div className="relative mt-24 overflow-hidden rounded-[40px] border border-orange-500/20 bg-gradient-to-br from-[#090909] via-[#111111] to-[#050505] p-8 shadow-[0_35px_120px_rgba(0,0,0,0.55)] lg:p-16">
+        <div className="relative mt-14 overflow-hidden rounded-[40px] border border-orange-500/20 bg-gradient-to-br from-[#090909] via-[#111111] to-[#050505] p-8 shadow-[0_35px_120px_rgba(0,0,0,0.55)] lg:p-16">
 
           {/* Glow */}
 
@@ -340,4 +340,3 @@ export default function Contact() {
     </section>
   );
 }
-            
